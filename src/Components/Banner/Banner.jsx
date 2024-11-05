@@ -36,7 +36,7 @@ const Banner = () => {
 
           {/* Banner Image */}
           <div className="absolute right-0 bottom-5 md:w-[50%] w-full  md:h-full h-[50%] bg-slate-500">
-            <img src="./banner.jpeg" className="w-full h-full z-10" alt="" />
+            <img src="./banner.jpg" className="w-full h-full z-10" alt="" />
             <div className="absolute -top-[24px] -right-[24px]">
               <svg
                 width="49"

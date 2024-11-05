@@ -172,7 +172,7 @@ const DeliciousFoods = () => {
       {/* side image design */}
 
       <div className="absolute size-40 right-[0] translate-x-[7rem] top-1/2 -translate-y-1/2">
-        <img src="./side.png" alt="" className="inset-0" />
+        <img src="./side1.png" alt="" className="inset-0" />
       </div>
     </div>
   );

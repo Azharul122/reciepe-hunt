@@ -3,7 +3,7 @@ import MainContainer from '../Container/container'
 
 const BookTable = () => {
     return (
-        <div className='bg-[url("./contact-bg.jpeg")] py-14 bg-cover'>
+        <div className='bg-[url("./contact-bg.jpg")] py-14 bg-cover'>
             <MainContainer>
                 <div className="md:w-[500px] sm:w-[425px] w-full flex flex-col gap-4">
                     <div className="flex  text-primary items-center gap-2">

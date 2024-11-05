@@ -121,7 +121,7 @@ const PopularFoods = () => {
 
       {/* side image design */}
       <div className="absolute size-40 left-0 -translate-x-[6rem] top-1/2 -translate-y-1/2">
-        <img src="./side.png" alt="" className="inset-0 -rotate-45" />
+        <img src="./side1.png" alt="" className="inset-0 -rotate-45" />
       </div>
     </div>
   );

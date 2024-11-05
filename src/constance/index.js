@@ -33,14 +33,14 @@ export const popularFoods = [
         title: "Vegetables Burger",
         price: "5",
         sDescription: "Barbecue Italian cuisine pizza",
-        image: "./1.jpeg"
+        image: "./1.jpg"
     },
     {
         id: 2,
         title: "Cheese Pizza",
         price: "8",
         sDescription: "Classic cheese pizza with a crispy crust",
-        image: "./2.jpeg"
+        image: "./2.jpg"
     },
     {
         id: 3,
@@ -54,7 +54,7 @@ export const popularFoods = [
         title: "Margherita Pizza",
         price: "10",
         sDescription: "Fresh mozzarella, basil, and tomato",
-        image: "./burger.jpeg"
+        image: "./burger.jpg"
     },
     {
         id: 5,
@@ -68,35 +68,35 @@ export const popularFoods = [
         title: "Veggie Wrap",
         price: "7",
         sDescription: "Fresh vegetables wrapped in a soft tortilla",
-        image: "./burger.jpeg"
+        image: "./burger.jpg"
     },
     {
         id: 7,
         title: "Grilled Chicken Salad",
         price: "9",
         sDescription: "Grilled chicken served on a bed of mixed greens",
-        image: "./1.jpeg"
+        image: "./1.jpg"
     },
     {
         id: 8,
         title: "Beef Tacos",
         price: "5",
         sDescription: "Seasoned beef with lettuce, cheese, and salsa",
-        image: "./2.jpeg"
+        image: "./2.jpg"
     },
     {
         id: 9,
         title: "Fried Fish Sandwich",
         price: "8",
         sDescription: "Crispy fish fillet with tartar sauce",
-        image: "./burger.jpeg"
+        image: "./burger.jpg"
     },
     {
         id: 10,
         title: "Classic Hamburger",
         price: "6",
         sDescription: "Juicy beef patty with lettuce, tomato, and pickles",
-        image: "./1.jpeg"
+        image: "./1.jpg"
     },
     {
         id: 11,
@@ -110,14 +110,14 @@ export const popularFoods = [
         title: "BBQ Ribs",
         price: "15",
         sDescription: "Tender ribs smothered in BBQ sauce",
-        image: "./2.jpeg"
+        image: "./2.jpg"
     },
     {
         id: 13,
         title: "Vegetarian Pizza",
         price: "9",
         sDescription: "Loaded with mushrooms, olives, peppers, and onions",
-        image: "./burger.jpeg"
+        image: "./burger.jpg"
     },
     {
         id: 14,
@@ -131,14 +131,14 @@ export const popularFoods = [
         title: "Chicken Caesar Salad",
         price: "10",
         sDescription: "Grilled chicken, romaine lettuce, and Caesar dressing",
-        image: "./2.jpeg"
+        image: "./2.jpg"
     },
     {
         id: 16,
         title: "Vegetarian Sushi",
         price: "12",
         sDescription: "Assorted vegetable sushi rolls",
-        image: "./1.jpeg"
+        image: "./1.jpg"
     },
     {
         id: 17,
@@ -152,21 +152,21 @@ export const popularFoods = [
         title: "Fish Tacos",
         price: "7",
         sDescription: "Grilled fish with slaw and salsa",
-        image: "./burger.jpeg"
+        image: "./burger.jpg"
     },
     {
         id: 19,
         title: "Shawarma Plate",
         price: "10",
         sDescription: "Tender lamb or chicken with rice and veggies",
-        image: "./1.jpeg"
+        image: "./1.jpg"
     },
     {
         id: 20,
         title: "Peking Duck",
         price: "18",
         sDescription: "Crispy duck with hoisin sauce and pancakes",
-        image: "./2.jpeg"
+        image: "./2.jpg"
     }
 ]
 
@@ -213,4 +213,7 @@ export const testimonialData = [
         image: "https://images.pexels.com/photos/1482803/pexels-photo-1482803.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     }
 ]
+
+
+
 
