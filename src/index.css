@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.btn {
+  padding: 10px 24px;
+  background-color: #febf00;
+}
+
+
+.CircularProgressbar-path {
+  stroke: #febf00 !important;
+}
+
+.CircularProgressbar-text {
+  fill: black !important;
+}
+
+.input{
+  padding: 10px 20px;
+  border:1px solid white;
+  color:white;
+  background-color: transparent;
+  width: 100%;
+  outline: none;
+  
+}
+
+
