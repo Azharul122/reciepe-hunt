@@ -9,7 +9,7 @@ const PopularFoods = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slideRef = useRef(null);
 
-  console.log(currentSlide, popularFoods.length);
+  // console.log(currentSlide, popularFoods.length);
 
   // Carousel responsive
 
@@ -99,7 +99,7 @@ const PopularFoods = () => {
             itemclassName="carousel-item-padding-40-px"
           >
             {popularFoods.map((pp) => (
-              <div className="card  px-3 " key={pp.Id}>
+              <div className="card  px-3 " key={pp.id}>
                 <div className="flex flex-col gap-3 border py-3 px-2 bg-white shadow-xl backdrop-blur-lg">
                   <img
                     src={pp.image}

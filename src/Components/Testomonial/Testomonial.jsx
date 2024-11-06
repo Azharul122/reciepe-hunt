@@ -9,7 +9,7 @@ const Testomonial = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slideRef = useRef(null);
 
-  console.log(currentSlide, testimonialData.length);
+  // console.log(currentSlide, testimonialData.length);
 
   // Carousel responsive
 
