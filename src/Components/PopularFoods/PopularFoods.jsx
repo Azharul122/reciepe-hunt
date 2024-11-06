@@ -4,10 +4,13 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { popularFoods } from "../../constance";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+import AOS from 'aos'
 
 const PopularFoods = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slideRef = useRef(null);
+  AOS.init();
+  
 
   // console.log(currentSlide, popularFoods.length);
 
@@ -95,6 +98,8 @@ const PopularFoods = () => {
           <Carousel
             ref={slideRef}
             arrows={false}
+            autoPlay={true}
+            infinite={true}
             responsive={responsive}
             itemclassName="carousel-item-padding-40-px"
           >

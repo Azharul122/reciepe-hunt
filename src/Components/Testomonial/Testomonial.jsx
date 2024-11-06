@@ -1,9 +1,13 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import MainContainer from "../Container/container";
 import { testimonialData } from "../../constance";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { FaAngleLeft, FaAngleRight, FaQuoteLeft } from "react-icons/fa";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { motion } from "framer-motion";
+// import Aos from "aos";
 
 const Testomonial = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -32,6 +36,35 @@ const Testomonial = () => {
       breakpoint: { max: 400, min: 0 },
       items: 1,
     },
+  };
+  useEffect(() => {
+    Aos.init({
+      duration: 1000, // Animation duration
+      easing: "ease-in-out", // Easing function
+      // Trigger animation only once
+    });
+  }, []);
+
+  // const handleAfterChange = () => {
+  //   Aos.refresh(); // Reinitialize AOS to trigger animations
+  // };
+
+  // Event handler for when the slide changes
+  const handleSlideChange = (newIndex) => {
+    setCurrentSlide(newIndex);
+  };
+
+  // Animation settings for Framer Motion
+  const slideVariants = {
+    hidden: { opacity: 0, x: -100 }, // Slide from right
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.8,
+      },
+    },
+    exit: { opacity: 0, x: 100, transition: { duration: 1 } }, // Slide out to the left
   };
 
   return (
@@ -89,39 +122,66 @@ const Testomonial = () => {
             ref={slideRef}
             arrows={false}
             responsive={responsive}
+            transitionDuration={3000}
             itemclassName=""
+            beforeChange={handleSlideChange} // Trigger when the slide changes
+            infinite={true}
+            autoPlay={true}
+            autoPlaySpeed={3000}
           >
             {testimonialData.map((pp) => (
-              <div className="card   " key={pp.id}>
+              <motion.div
+                className="card"
+                key={currentSlide} // Key for motion component to force remount on slide change
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                variants={slideVariants}
+              >
                 <div className="flex-col-reverse md:h-[350px] h-[500]   md:flex-row w-full flex  py-3 px-2  shadow-xl backdrop-blur-lg items-center">
                   <div className=" md:col-span-4 md:w-[40%] shrink-0 md:h-full sm:h-[200px]  h-[250px]  w-full px-8 py-5  bg-btnColor">
                     <FaQuoteLeft />
 
                     <div className="pl-[20px] relative h-full">
-                      <p className="text-justify">{pp.comment}</p>
+                      <p data-aos="fade-up" className="text-justify">{pp.comment}</p>
 
                       {/* profile */}
                       <div className="profile flex items-center justify-between border-b border-black py-3 absolute left-0 bottom-3 w-full">
                         <div className="">
-                          <p className="mb-2 text-xl">{pp.name}</p>
-                          <p className="text-sm">{pp.location}</p>
+                          <p
+                            data-aos="fade-up"
+                           
+                            className="mb-2 text-xl"
+                          >
+                            {pp.name}
+                          </p>
+                          <p
+                            data-aos="fade-up"
+                            
+                            className="text-sm"
+                          >
+                            {pp.location}
+                          </p>
                         </div>
                         <div className="">
                           <img
                             src={`${pp.profileImage}`}
                             className="size-10 rounded-full"
                             alt=""
+                            data-aos="fade-up"
+                            
                           />
                         </div>
                         <div className="absolute w-[50px] bg-primary h-[1px] bottom-[1px] right-0"></div>
                       </div>
                     </div>
                   </div>
-                  <div
+                  <motion.div
+                    
                     style={{ backgroundImage: `url(${pp.image})` }}
                     className={` md:col-span-6 shrink-0 md:w-[60%] w-full  bg-cover md:h-full sm:h-[300px] h-[250px] relative`}
                   >
-                    <div className="bg-[rgba(0,0,0,0.5)] w-full h-full flex justify-center items-center">
+                    <div data-aos="zoom-in" className="bg-[rgba(0,0,0,0.5)] w-full h-full flex justify-center items-center">
                       <svg
                         width="50"
                         height="50"
@@ -136,9 +196,9 @@ const Testomonial = () => {
                         />
                       </svg>
                     </div>
-                  </div>
+                  </motion.div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </Carousel>
         </div>
