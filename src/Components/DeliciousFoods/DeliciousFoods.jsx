@@ -8,7 +8,7 @@ const DeliciousFoods = () => {
   const [selectedTab, setSelectedTab] = useState("about");
 
   return (
-    <div className="md:mt-[30rem] mt-[45rem] relative overflow-hidden">
+    <div className="md:mt-[30rem] sm:mt-[46rem] mt-[45rem] relative overflow-hidden">
       <MainContainer>
         <div className="md:flex   md:gap-2 gap-6">
           <div className=" md:w-[40%] w-full relative shrink-0 md:mb-0 mb-5">

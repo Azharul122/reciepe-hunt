@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className='w-full relative   bg-[url("./footer-bg.jpg")] text-white bg-cover overflow-hidden'>
+    <div style={{ backgroundImage: "url('/footer-bg.jpg')" }}
+    className='w-full relative    text-white bg-cover overflow-hidden'>
       <div className=" bg-[rgba(0,0,0,0.5)] w-full h-full py-10">
         <MainContainer>
           <div className="flex items-center  gap-6 flex-col">
